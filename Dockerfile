@@ -3,7 +3,7 @@ MAINTAINER Mien <mien@dreamxo.net>
 
 # install dependencies
 RUN apt-get update && \
-    apt-get install -y unzip calibre xsltproc curl
+    apt-get install -y --in-install-recommends unzip calibre xsltproc curl fonts-noto fonts-noto-cjk locales-all
 
 # install gitbook toolchain
 RUN npm install -g gitbook-cli ebook-convert && \
