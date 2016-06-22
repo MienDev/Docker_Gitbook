@@ -3,9 +3,20 @@ MAINTAINER Mien <mien@dreamxo.net>
 
 # install dependencies
 RUN apt-get update && \
-    apt-get install -y --in-install-recommends unzip calibre xsltproc curl
-    
-RUN apt-get install -y fonts-noto fonts-noto-cjk locales-all
+    apt-get install -y --in-install-recommends unzip calibre xsltproc curl && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install Utilities
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends procps git unzip xsltproc curl && \
+    rm -rf /var/lib/apt/lists/*
+
+## Install Calibre
+RUN echo "deb http://http.debian.net/debian jessie-backports main" > /etc/apt/sources.list.d/backports.list && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends calibre fonts-noto fonts-noto-cjk locales-all && \
+    rm -rf /var/lib/apt/lists/*
+
 
 # install gitbook toolchain
 RUN npm install -g gitbook-cli ebook-convert && \
