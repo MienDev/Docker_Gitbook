@@ -22,6 +22,9 @@ ENV BOOKROOT /var/www/gitbook/
 COPY . $BOOKROOT
 WORKDIR $BOOKROOT
 RUN gitbook install 
+RUN rm -f *.* && \
+    rm -rf searchindex
+
 EXPOSE 4000
 
 CMD ["gitbook","serve"]
