@@ -4,7 +4,7 @@
 
 ## About / 关于
 
-{{book.this_year}} som
+{{book.this_year}}
 
 ##HOW TO / 怎样使用这个镜像
 
