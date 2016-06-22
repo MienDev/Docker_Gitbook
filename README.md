@@ -2,7 +2,7 @@
 
 
 
-## About / 关于
+## ABOUT / 关于
 
 {{book.this_year}}
 
