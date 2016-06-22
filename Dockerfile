@@ -24,4 +24,5 @@ WORKDIR $BOOKROOT
 
 RUN gitbook init
 RUN gitbook install 
+EXPOSE 4000
 CMD ["gitbook","serve"]
