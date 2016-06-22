@@ -1,0 +1,10 @@
+{
+    "variables": {
+        "this_year": "2016"
+    },
+    "plugins": [
+        "-lunar",
+        "search-jieba"
+    ],
+    "pluginsConfig": {}
+}
