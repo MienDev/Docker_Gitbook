@@ -3,7 +3,7 @@ MAINTAINER Mien <mien@dreamxo.net>
 
 # install dependencies
 RUN apt-get update && \
-    apt-get install -y --in-install-recommends unzip calibre xsltproc curl && \
+    apt-get install -y --no-install-recommends unzip calibre xsltproc curl && \
     rm -rf /var/lib/apt/lists/*
 
 ## Install Calibre
