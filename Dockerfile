@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y unzip calibre xsltproc curl
 
 # install gitbook toolchain
-RUN npm install -g gitbook-cli ebook-convert svgexpor && \
+RUN npm install -g gitbook-cli ebook-convert && \
     gitbook fetch
 
 # cache plugins 
