@@ -6,7 +6,7 @@
 
 {{book.this_year}}
 
-##HOW TO / 怎样使用这个镜像
+##HOW TO / 怎样使用
 
 * 直接使用
 
